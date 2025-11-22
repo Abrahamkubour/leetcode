@@ -1,0 +1,12 @@
+class Solution:
+    def averageValue(self, nums: List[int]) -> int:
+        values = []
+        for num in nums:
+            if (num % 2 == 0) and (num % 3 == 0):
+                 values.append(num)
+        if len(values) == 0:
+            return 0 
+        else:
+            total_ave = sum(values) // len(values)
+            return (total_ave)
+                
