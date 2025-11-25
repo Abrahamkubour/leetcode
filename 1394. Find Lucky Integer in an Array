@@ -1,0 +1,14 @@
+class Solution:
+    def findLucky(self, arr: List[int]) -> int:
+        value = {}
+        for num in arr:
+            if num in value:
+                value[num] += 1
+            else:
+                value[num] = 1
+        
+        lucky_nums = [num for num, freq in value.items() if num == freq]
+        return max(lucky_nums) if lucky_nums else -1
+
+
+
