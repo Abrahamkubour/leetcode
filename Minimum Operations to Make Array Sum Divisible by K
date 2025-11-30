@@ -1,0 +1,8 @@
+class Solution:
+    def minOperations(self, nums: List[int], k: int) -> int:
+        Total_Sum = sum(nums)
+        remainder = Total_Sum % k
+        if remainder == 0:
+            return 0
+        else:
+            return remainder
